@@ -7,6 +7,7 @@ body
     justify-content: center
     overflow: hidden
     padding-top: 180px
+    font-family: "Outfit", sans-serif
 
 .bg-img
     position: absolute
@@ -27,3 +28,101 @@ body
     padding: 24px 26px 32px 26px
     img
         width: 145px
+
+.word-ui 
+    background-color: #4A5567
+    padding: 12px 96px 12px 96px
+    margin-top: 24px
+    border-radius: 5px
+    p
+        font-size: 2rem
+        color: #97A3B6
+        letter-spacing: 1rem
+
+.game-info
+    margin-top: 24px
+    display: inline-flex
+    flex-wrap: wrap
+    gap: 62px
+
+.label
+    font-size: 0.75rem 
+    color: #4A5567
+
+.tries-container
+    display: inline-flex
+    flex-wrap: wrap
+    gap: 8px
+    align-items: center
+    .mistakes
+        display: inline-flex
+        flex-wrap: wrap
+        gap: 6px
+
+.mistake
+    display: block
+    width: 6px
+    height: 6px
+    border-radius: 100%
+    background-color: #394150
+    &.active
+        background-color: #7429C6
+
+.mistakes-container
+    display: inline-flex
+    flex-wrap: wrap
+    gap: 6px
+    align-items: center
+    .used-words
+        font-size: 1rem
+        color: #97A3B6
+
+.letters-display
+    margin-top: 52px
+    display: inline-flex
+    flex-wrap: wrap
+    gap: 6px
+
+.letter
+    font-size: 1.25rem
+    color: #F2F5F9
+    width: 44px
+    height: 41px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: solid 2px 
+    border-radius: 8px
+    border-color: #4A5567
+    &.active
+        border-color: #7B248A
+
+.btn-container
+    margin-top: 52px
+    display: inline-flex
+    flex-wrap: wrap
+    gap: 40px
+
+.primary-btn
+    color: #F2F5F9
+    background-color: #C951E7
+    font-size: 0.875rem
+    font-weight: 600
+    outline: none
+    border: none
+    border-radius: 8px
+    width: 124px
+    height: 36px
+    display: flex
+    justify-content: center
+    align-items: center
+    box-shadow: 0 4px #7B248A
+    cursor: pointer
+    &:hover
+        background-color: #AB02D6
+    &:active
+        box-shadow: none
+        transform: translateY(4px)
+        background-color: #AB02D6 
+
+

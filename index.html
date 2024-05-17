@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess The Word</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
 </head>
 <body>
@@ -11,6 +14,41 @@
 
     <section class="game-ui">
         <img src="./assets/Word Scramblle.svg">
+        
+        <div class="word-ui">
+            <p>relowf</p>
+        </div>
+
+        <div class="game-info">
+            <div class="tries-container">
+                <p class="label">Tries (4/5):</p>
+                <div class="mistakes">
+                    <span class="mistake active"></span>
+                    <span class="mistake active"></span>
+                    <span class="mistake active"></span>
+                    <span class="mistake active"></span>
+                    <span class="mistake"></span>
+                </div>
+            </div>
+            <div class="mistakes-container">
+                <p class="label">Mistakes: </p>
+                <p class="used-words">a, e, w, t</p>
+            </div>
+        </div>
+
+        <div class="letters-display">
+            <p class="letter">f</p>
+            <p class="letter">l</p>
+            <p class="letter">o</p>
+            <p class="letter">w</p>
+            <p class="letter active">_</p>
+            <p class="letter"></p>
+        </div>
+
+        <div class="btn-container">
+            <button class="primary-btn">Random</button>
+            <button class="primary-btn">Reset</button>
+        </div>
     </section>
 </body>
 </html>
