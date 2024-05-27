@@ -1,5 +1,6 @@
 const generateUserInput = (word) => {
     const letterContainer = document.querySelector('.letters-display');
+    letterContainer.textContent = "";
 
     for(var i = 0; i < word.length; i++) {
         const node = document.createElement("p");
@@ -48,10 +49,20 @@ const cleanMistakes = () => {
     }
 };
 
+const getRandomInt = max => {
+    return Math.floor(Math.random() * max);
+};
+
+const getRandomWord = words => {
+    return words[getRandomInt(words.length)];
+};
+
+
 window.addEventListener('load', () => {
     // Global status
-    const word = "flower";
-    const randomWord = "relowf";
+    const words = ['flower', 'ball', 'planet', 'raccoon', 'shark'];
+    var word = "";
+    var randomWord = "";
     var correctWords = [];
     var trieCounter = 0;
     var mistakes = [];
@@ -63,13 +74,20 @@ window.addEventListener('load', () => {
     const mistakesList = document.querySelectorAll('.mistake');
     const mistakeLetters = document.querySelector('.used-words');
     const resterBtn = document.querySelector('#reset');
+    const randomBtn = document.querySelector('#random-btn');
 
-    const pNode = document.createElement('p');
-    pNode.appendChild(document.createTextNode(randomWord));
-    wordDisplay.appendChild(pNode);
+    const generateRandomWord = () => {
+        word = getRandomWord(words);;
+        randomWord = word.split('').sort(function(){ return 0.5-Math.random() }).join('');
+        const pNode = document.createElement('p');
+        pNode.appendChild(document.createTextNode(randomWord));
+        wordDisplay.textContent = "";
+        wordDisplay.appendChild(pNode);
+        generateUserInput(word);
+    };
+
+    generateRandomWord();
     
-    generateUserInput(word);
-
     const restartGame = () => {
         cleanUserInput();
         cleanMistakes();
@@ -110,6 +128,11 @@ window.addEventListener('load', () => {
 
     resterBtn.addEventListener('click', () => {
         restartGame();
+    });
+
+    randomBtn.addEventListener('click', () => {
+        restartGame();
+        generateRandomWord();
     });
 
 });
