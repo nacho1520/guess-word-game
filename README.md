@@ -10,4 +10,4 @@ User can generate a new random word and restart the current game.
 * SASS
 * JavaScript
 
-![Screenshot](https://github.com/nacho1520/random-quotes/blob/main/public/shot.png)
+![Screenshot](https://github.com/nacho1520/guess-word-game/blob/main/public/screen-shot.png)
