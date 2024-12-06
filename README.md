@@ -10,4 +10,8 @@ User can generate a new random word and restart the current game.
 * SASS
 * JavaScript
 
+## Deployed App:
+
+[Guess The Word](https://nacho1520.github.io/guess-word-game/)
+
 ![Screenshot](https://github.com/nacho1520/guess-word-game/blob/main/public/screen-shot.png)
